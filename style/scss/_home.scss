@@ -1,0 +1,132 @@
+ body#home {
+   background-image: url(../../assets/home/background-home-desktop.jpg);
+   background-size: cover;
+ }
+
+ .home {
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-evenly;
+   margin-top: 200px;
+
+   .home-content {
+     .home-content-title {
+       font-family: $ballefair;
+       font-size: $xlarge;
+       font-weight: 200;
+       text-transform: uppercase;
+       color: $white;
+
+       span {
+         display: block;
+         font-size: 150px;
+         margin-top: $medium;
+       }
+
+     }
+
+     .home-content-paragraph {
+       font-family: $barlow;
+       font-weight: 300;
+       font-size: 18px;
+       line-height: 1.78;
+       color: $color-paragraph;
+       margin-top: $xlarge;
+       width: 28.75rem;
+     }
+   }
+
+   .home-explore {
+
+     .home-explore-button {
+       position: relative;
+       font-family: $ballefair;
+       font-size: $huge;
+       font-weight: 500;
+       text-transform: uppercase;
+       color: $black;
+       width: 17rem;
+       height: 17rem;
+       border: none;
+       border-radius: 50%;
+       background-color: $white;
+       cursor: pointer;
+       z-index: 100;
+
+       span {
+         position: absolute;
+         display: block;
+         left: 0;
+         bottom: 0;
+         border-radius: 50%;
+         width: 17rem;
+         height: 17rem;
+         z-index: -1;
+         opacity: .8;
+       }
+
+       &:hover {
+         animation: hoverButtonExplore 700ms linear;
+       }
+
+       &:hover span {
+         animation: hoverSpanExplore 700ms linear;
+       }
+     }
+   }
+ }
+
+ @keyframes hoverButtonExplore {
+   0% {
+     box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
+     transform: scale(.95);
+   }
+
+   10% {
+     box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, .2);
+     transform: scale(1);
+     transition: all 200ms linear;
+   }
+
+   70% {
+     box-shadow: 0px 0px 0px 20px rgba(255, 255, 255, .1);
+   }
+
+   80% {
+     box-shadow: 0px 0px 0px 20px rgba(255, 255, 255, .05);
+   }
+
+   90% {
+     box-shadow: 0px 0px 0px 20px transparent;
+   }
+
+   100% {
+     box-shadow: 0px 0px 0px 20px transparent;
+   }
+ }
+
+ @keyframes hoverSpanExplore {
+   0% {
+     box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
+   }
+
+   10% {
+     box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, .2);
+   }
+
+   70% {
+     box-shadow: 0px 0px 0px 50px rgba(255, 255, 255, .1);
+   }
+
+   80% {
+     box-shadow: 0px 0px 0px 50px rgba(255, 255, 255, .03);
+   }
+
+   90% {
+     box-shadow: 0px 0px 0px 20px transparent;
+   }
+
+   100% {
+     box-shadow: 0px 0px 0px 50px transparent;
+   }
+ }

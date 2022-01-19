@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300&display=swap");
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 32px;
+}
+.header .header-line {
+  position: absolute;
+  transform: translateX(-60%);
+  width: 450px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.header .header-navbar-links {
+  transform: translateX(100px);
+  width: 850px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(77, 92, 115, 0.95);
+}
+.header .header-navbar-links .header-navbar-links-item {
+  font-family: "Barlow", sans-serif;
+  position: relative;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 41px 0;
+}
+.header .header-navbar-links .header-navbar-links-item a {
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  margin-left: 5px;
+}
+.header .header-navbar-links .header-navbar-links-item a ~ span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0px;
+  height: 4px;
+  transition: all 500ms ease-in-out;
+}
+.header .header-navbar-links .header-navbar-links-item a:hover ~ span {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 500ms ease-in-out;
+}
+
+#home .header-navbar-links-item .header-navbar-links-item-home + span {
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #FFFFFF;
+  transition: all 500ms ease-in-out;
+}
+
+#destination .header-navbar-links-item .header-navbar-links-item-destination + span {
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #FFFFFF;
+  transition: all 500ms ease-in-out;
+}
+
+#crew .header-navbar-links-item .header-navbar-links-item-crew + span {
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #FFFFFF;
+  transition: all 500ms ease-in-out;
+}
+
+#technology .header-navbar-links-item .header-navbar-links-item-technology + span {
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #FFFFFF;
+  transition: all 500ms ease-in-out;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body#home {
+  background-image: url(../../assets/home/background-home-desktop.jpg);
+  background-size: cover;
+}
+
+.home {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  margin-top: 200px;
+}
+.home .home-content .home-content-title {
+  font-family: "Bellefair", serif;
+  font-size: 24px;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.home .home-content .home-content-title span {
+  display: block;
+  font-size: 150px;
+  margin-top: 16px;
+}
+.home .home-content .home-content-paragraph {
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.78;
+  color: #d0d6f9;
+  margin-top: 24px;
+  width: 28.75rem;
+}
+.home .home-explore .home-explore-button {
+  position: relative;
+  font-family: "Bellefair", serif;
+  font-size: 36px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000000;
+  width: 17rem;
+  height: 17rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  z-index: 100;
+}
+.home .home-explore .home-explore-button span {
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  border-radius: 50%;
+  width: 17rem;
+  height: 17rem;
+  z-index: -1;
+  opacity: 0.8;
+}
+.home .home-explore .home-explore-button:hover {
+  animation: hoverButtonExplore 700ms linear;
+}
+.home .home-explore .home-explore-button:hover span {
+  animation: hoverSpanExplore 700ms linear;
+}
+
+@keyframes hoverButtonExplore {
+  0% {
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
+    transform: scale(0.95);
+  }
+  10% {
+    box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.2);
+    transform: scale(1);
+    transition: all 200ms linear;
+  }
+  70% {
+    box-shadow: 0px 0px 0px 20px rgba(255, 255, 255, 0.1);
+  }
+  80% {
+    box-shadow: 0px 0px 0px 20px rgba(255, 255, 255, 0.05);
+  }
+  90% {
+    box-shadow: 0px 0px 0px 20px transparent;
+  }
+  100% {
+    box-shadow: 0px 0px 0px 20px transparent;
+  }
+}
+@keyframes hoverSpanExplore {
+  0% {
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
+  }
+  10% {
+    box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.2);
+  }
+  70% {
+    box-shadow: 0px 0px 0px 50px rgba(255, 255, 255, 0.1);
+  }
+  80% {
+    box-shadow: 0px 0px 0px 50px rgba(255, 255, 255, 0.03);
+  }
+  90% {
+    box-shadow: 0px 0px 0px 20px transparent;
+  }
+  100% {
+    box-shadow: 0px 0px 0px 50px transparent;
+  }
+}
+body#destination {
+  background: url(../../assets/destination/background-destination-desktop.jpg);
+  background-size: cover;
+}
+
+.destination {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.destination .destination-space {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
+}
+.destination .destination-space h2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  align-self: center;
+  margin-right: 100px;
+}
+.destination .destination-space h2 span {
+  color: rgba(255, 255, 255, 0.35);
+  margin-right: 16px;
+}
+.destination .destination-space img {
+  margin-top: 60px;
+  width: 445px;
+  align-self: center;
+}
+.destination .destination-description {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.destination .destination-description .destination-description-nav-link {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+.destination .destination-description .destination-description-nav-link .button-select {
+  border-bottom: 3px solid #FFFFFF;
+}
+.destination .destination-description .destination-description-nav-link button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+.destination .destination-description .destination-description-nav-link button:hover span {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #FFFFFF;
+  transition: all 200ms ease-in-out;
+}
+.destination .destination-description .destination-description-nav-link button span {
+  width: 0;
+  transition: all 200ms ease-in-out;
+}
+.destination .destination-description-title {
+  font-family: "Bellefair", serif;
+  font-size: 100px;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.destination .destination-description-paragraph {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #d0d6f9;
+  width: 28rem;
+  padding-bottom: 50px;
+}
+.destination .destination-description-info {
+  display: flex;
+  justify-content: flex-start;
+  gap: 70px;
+}
+.destination .destination-description-info .destination-description-info-1 {
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #d0d6f9;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+.destination .destination-description-info .destination-description-info-1 span {
+  display: block;
+  font-weight: 700;
+  font-size: 32px;
+  color: #FFFFFF;
+  margin-top: 10px;
+}
+.destination .destination-description-info .destination-description-info-2 {
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #d0d6f9;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+.destination .destination-description-info .destination-description-info-2 span {
+  display: block;
+  font-weight: 700;
+  font-size: 32px;
+  color: #FFFFFF;
+  margin-top: 10px;
+}
+
+.line {
+  height: 0.5px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.hidden {
+  animation: animation-end 1000ms ease-in-out alternate-reverse;
+}
+
+@keyframes animation-end {
+  to {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+body#crew {
+  background: url(../../assets/crew/background-crew-desktop.jpg) no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1000px) {
+  body#home {
+    background-image: url(../../assets/home/background-home-tablet.jpg);
+  }
+
+  body#destination {
+    background-image: url(../../assets/destination/background-destination-tablet.jpg);
+  }
+
+  .header {
+    margin-top: 0;
+    justify-content: space-between;
+  }
+  .header .header-line {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .header .header-logo {
+    margin-left: 50px;
+  }
+  .header .header-navbar-links {
+    transform: translateX(0);
+    width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(42, 48, 56, 0.95);
+  }
+  .header .header-navbar-links-item .number {
+    display: none;
+  }
+
+  .home {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 120px;
+  }
+  .home .home-content {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  .home .home-explore {
+    margin-bottom: 100px;
+  }
+
+  .destination {
+    flex-direction: column;
+    text-align: center;
+  }
+  .destination .destination-space h2 {
+    font-size: 24px;
+    margin-right: 300px;
+    font-weight: 300;
+  }
+  .destination .destination-space h2 span {
+    font-weight: 700;
+  }
+  .destination .destination-description-nav {
+    transform: translateX(25%);
+  }
+  .destination .destination-description-nav .destination-description-nav-link button {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .destination .destination-description-paragraph {
+    width: 34rem;
+  }
+  .destination .destination-description-info {
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+  .destination .destination-description-info .destination-description-info-1 span,
+.destination .destination-description-info .destination-description-info-2 span {
+    font-size: 28px;
+    font-weight: 500;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

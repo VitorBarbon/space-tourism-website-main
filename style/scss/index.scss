@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300&display=swap');
+@import '_variables.scss';
+@import '_header.scss';
+
+
+$count: 0;
+$list-id-page: home,
+destination,
+crew,
+technology;
+
+@each $i in $list-id-page {
+  ##{$i} {
+    .header-navbar-links-item {
+      .header-navbar-links-item-#{$i}+span {
+        z-index: 100;
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: $white;
+        transition: all 500ms ease-in-out;
+      }
+    }
+
+    $count: $count+1;
+  }
+
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+
+@import '_home.scss';
+@import '_destination.scss';
+@import '_crew.scss';
+
+
+@media (max-width: 1000px) {
+
+  body#home {
+    background-image: url(../../assets/home/background-home-tablet.jpg);
+  }
+
+  body#destination {
+    background-image: url(../../assets/destination/background-destination-tablet.jpg);
+  }
+
+  .header {
+    margin-top: 0;
+    justify-content: space-between;
+
+    .header-line {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .header-logo {
+      margin-left: 50px;
+    }
+
+    .header-navbar-links {
+      transform: translateX(0);
+      width: 600px;
+      display: flex;
+      justify-content: space-evenly;
+      background-color: rgba(42, 48, 56, 0.95);
+    }
+
+    .header-navbar-links-item .number {
+      display: none;
+    }
+  }
+
+  .home {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 120px;
+
+    .home-content {
+      text-align: center;
+      margin-bottom: 100px;
+    }
+
+    .home-explore {
+      margin-bottom: 100px;
+    }
+  }
+
+  .destination {
+    flex-direction: column;
+    text-align: center;
+
+    .destination-space {
+      h2 {
+        font-size: $xlarge;
+        margin-right: 300px;
+        font-weight: 300;
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .destination-description-nav {
+      transform: translateX(25%);
+
+      .destination-description-nav-link {
+        button {
+          font-size: $medium;
+          font-weight: 500;
+        }
+
+      }
+    }
+
+    .destination-description-paragraph {
+      width: 34rem;
+    }
+
+    .destination-description-info {
+      justify-content: center;
+      margin-bottom: 100px;
+
+      .destination-description-info-1,
+      .destination-description-info-2 {
+        span {
+          font-size: $big;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
